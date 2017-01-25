@@ -16,6 +16,7 @@ const buildPreset = (context, opts = {}) => {
 }
 
 const defaultPreset = buildPreset({})
+export default defaultPreset
 
 Object.defineProperty(defaultPreset, "buildPreset", {
   configurable: true,
