@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-c4605",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Babel preset added more radical syntax",
   "main": "lib/index.js",
   "repository": {},
@@ -13,18 +13,19 @@
     "node": ">=6.9.4"
   },
   "dependencies": {
+    "babel-plugin-transform-async-to-module-method": "^6.24.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-do-expressions": "^6.22.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
     "babel-plugin-transform-function-bind": "^6.22.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-plugin-transform-optional-chaining": "^7.0.0-alpha.13.1"
+    "babel-plugin-transform-optional-chaining": "^7.0.0-alpha.19"
   },
   "devDependencies": {
     "babel-cli": "^6.22.2"
   },
   "peerDependencies": {
-    "babel": "babel/babel#v7.0.0-alpha.19"
+    "babel-core": "^7.0.0-alpha.19"
   }
 }

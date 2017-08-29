@@ -5,6 +5,7 @@ import transformDoExpressions from 'babel-plugin-transform-do-expressions'
 import transformFunctionBind from 'babel-plugin-transform-function-bind'
 import transformObjectRestSpread from 'babel-plugin-transform-object-rest-spread'
 import transformOptionalChaining from 'babel-plugin-transform-optional-chaining'
+import transformAsyncToModuleMethod from 'babel-plugin-transform-async-to-module-method'
 
 const buildPreset = (context, opts = {}) => {
   let modules = 'commonjs'
@@ -18,6 +19,7 @@ const buildPreset = (context, opts = {}) => {
       [transformFunctionBind, opts.transformFunctionBind],
       [transformObjectRestSpread, opts.transformObjectRestSpread],
       [transformOptionalChaining, opts.transformOptionalChaining],
+      opts.transformAsync !== false && [transformAsyncToModuleMethod, opts.transformAsyncToModuleMethod],
       modules === "commonjs" && [transformES2015ModulesCommonJS, opts.transformES2015ModulesCommonJS],
       modules === "umd" && [transformES2015ModulesUMD, opts.transformES2015ModulesUMD],
     ].filter(Boolean)
